@@ -21,10 +21,11 @@ describe("Simulating clicks", ()=> {
 
   it("Multiple clicks using chain commands", ()=> {
     cy.visit("https://saucedemo.com")
-    for(let i=0;i<10;i++){
-      cy.get('[data-test="login-button"]').click({force:true})
-    i++;
-    }
+    cy.get('[data-test="login-button"]')
+    .click({force:true})
+    .click({force:true})
+    .click({force:true})
+    .click({force:true})
   });
 
 });
